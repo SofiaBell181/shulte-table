@@ -1,11 +1,7 @@
 import iphone from '../image/iPhone.png';
 import iphoneCol from '../image/iPhone-color.png';
-import logo from '../image/schulte-logo.png';
-import logoCol from '../image/schulte-logo-color.png';
 import lo from '../image/2.png';
 import locol from '../image/3.png';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -16,12 +12,6 @@ export default function About() {
     const phone = useRef();
     const logoRef = useRef();
     const app = useRef();
-
-    // useEffect(() => {
-    //     AOS.init({duration:2000, once:true})
-    // },[])
-
-    const tl = useRef();
 
     gsap.registerPlugin(ScrollTrigger);
     useEffect(() => {

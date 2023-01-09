@@ -59,7 +59,7 @@ export default function Header() {
                     </div>
 
                     <div className="l-nav" onMouseMove={() => setActive(true)} onMouseLeave={() => setActive(false)}>
-                        <a href="/home"></a>
+                        <a href="/home">text</a>
                     </div>
 
 

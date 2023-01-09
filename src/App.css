@@ -170,6 +170,7 @@ li {
     height: 25px;
     background-repeat: no-repeat;
     background-size: cover;
+    color: transparent;
 }
 
 .l-part, .r-part, .l-header , .r-header {
