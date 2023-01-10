@@ -38,6 +38,7 @@ export default function Game() {
         e.preventDefault();
         let three='3..';
         let two = '2..';
+        setNotActive(prevCheck => !prevCheck);
         setTimeout(() => {
             setIntervalId(three)
         } , 500);
@@ -59,7 +60,7 @@ export default function Game() {
 
     const startGame = () => {
         image.current.style.display = 'none';
-        setNotActive(prevCheck => !prevCheck);
+        // setNotActive(prevCheck => !prevCheck);
         createElementsInside();
     }
 
@@ -99,13 +100,13 @@ export default function Game() {
     }
 
     useEffect(() => {
-        if (notActive === true) {
+        if (notActive === true && intervalId === '') {
             intervalRef.current = setInterval(() => {
                 setCount((sec) => sec + 1);
             }, 1000);
             return () => clearInterval(intervalRef.current);
         }
-      }, [notActive, setNotActive]);
+      }, [notActive, setNotActive, intervalId, setIntervalId]);
 
       useEffect(() => {
         localStorage.setItem("time", Number(count));
@@ -226,7 +227,7 @@ export default function Game() {
             <div className='container-game'>
                 <div className='block-header'>
                     <p className={(notActive || endGame)  ? 'game-header displayNone' : 'game-header'}>Try it on a simplified version of the Schulte table </p>
-                    <p className={((nextNumber > 16) || (count >= 90) || (!notActive)) ? 'next-number game-par opacity' : count === 0 ? 'next-number game-par opacity' : 'next-number game-par show'}>{nextNumber > 16 ? '' : 'Next: ' + nextNumber}</p>
+                    <p className={((nextNumber > 16) || (count >= 90) || (!notActive)) ? 'next-number game-par opacity' : count < 0 ? 'next-number game-par opacity' : 'next-number game-par show'}>{nextNumber > 16 ? '' : 'Next: ' + nextNumber}</p>
                 </div>
 
                 <div className='block-game' data-aos="zoom-in">
@@ -240,7 +241,9 @@ export default function Game() {
 
                 <div className='block-timer'>
                     <p className={(notActive || endGame) ? 'game-par opacity' : 'game-par show'}>Focus your eyes in the center and try to press from 1 to 16 <br /> without moving them as fast as possible</p>
-                    <p className={((cellNum === 16 && nextNumber > 16) || (count >= 90) || (!notActive)) ? 'game-par-end' : 'game-par'}>{count <= 0 ? '' : 'Time: ' + formatSeconds(count) + 's'}</p>
+                    <p className={((cellNum === 16 && nextNumber > 16) || (count >= 90) || (!notActive)) ? 'game-par-end' : 'game-par'}>{(count <= 0) ? '' : 'Time: ' + formatSeconds(count) + 's'}</p>
+
+                    <p className={(notActive && count < 90 ) ? 'game-par' : 'game-par opacity'}>{(count < 0 || endGame) ? '' : 'Time: ' + formatSeconds(count) + 's'}</p>
                 </div>
             </div>
         </>

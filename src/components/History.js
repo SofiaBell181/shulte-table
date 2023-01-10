@@ -1,6 +1,3 @@
-import ver1 from '../image/logo-ver1.png';
-import ver2 from '../image/logo-ver2.png';
-import logoCol from '../image/schulte-logo-color.png';
 import iphoneSE from '../image/iPhoneSE.png';
 import iphoneXR from '../image/iPhoneXR.png';
 import iphone13 from '../image/iPhone13Pro.png';
@@ -26,9 +23,9 @@ export default function History() {
                                     <h2>App version history</h2>
                                 </div>
                             </div>
-                            <img src={ver1} alt="" />
+                            <div className='logo1'></div>
                             <p>ver. 1.0</p>
-                            <img src={iphoneSE} className="mocap"   alt="" />
+                            <img src={iphoneSE} className="mocap"   alt="iphone" />
                             
                                 <ul>
                                     <li>Color & b/w version</li>
@@ -46,9 +43,9 @@ export default function History() {
                         </div>
 
                         <div className='section' data-aos="fade-up" data-easing="linear" data-aos-delay="700">
-                            <img src={ver2} alt="" />
+                        <div className='logo2'></div>
                             <p>ver. 2.0</p>
-                            <img src={iphoneXR} className="mocap"  alt="" />
+                            <img src={iphoneXR} className="mocap"  alt="iphone" />
                             
                                 <ul>
                                     <li>Completely redesigned for better user experience</li>
@@ -60,9 +57,9 @@ export default function History() {
                     </div>
                     <div className='block-version version-3'>
                         <div className='section' data-aos="fade-up" data-easing="linear" data-aos-delay="1400">
-                            <img src={logoCol} alt="" />
+                        <div className='logo3'></div>
                             <p>ver. 2.2</p>
-                            <img src={iphone13} className="mocap"  alt="" />
+                            <img src={iphone13} className="mocap"  alt="iphone" />
                                 <ul>
                                     <li>Minor improvments and bug fixes</li>
                                     <li>Support for 11 languages</li>

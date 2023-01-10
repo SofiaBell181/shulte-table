@@ -1,7 +1,7 @@
-import iphone from '../image/iPhone.png';
-import iphoneCol from '../image/iPhone-color.png';
-import lo from '../image/2.png';
-import locol from '../image/3.png';
+import iphone from '../image/iPhone13.png';
+import iphoneCol from '../image/iPhone13-color.png';
+import logo from '../image/logo.svg';
+import logoColor from '../image/logo-color.svg';
 import { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -93,8 +93,8 @@ export default function About() {
 
                 <div className="r-about r-move move">
                     <div className='block-image-phone'>
-                        <img src={lo} className="phone logo" width="256" alt="logo shulte" />
-                        <img src={locol}  className="phone-color logo" ref={logoRef} width="256" alt="logo shulte" />
+                        <img src={logo} className="phone logo" width="256" alt="logo shulte" />
+                        <img src={logoColor}  className="phone-color logo" ref={logoRef} width="256" alt="logo shulte" />
                     </div>
                     <p>Try the Schulte method to increase attention and speed of perception of information</p>
                     <div className='link-store'></div>

@@ -1,5 +1,4 @@
-import logoCol from '../image/schulte-logo-color.png';
-import appStore from '../image/appStore-bl.png'
+
 
 export default function Footer() {
     return(
@@ -8,8 +7,8 @@ export default function Footer() {
 
                 <div className="footer-logo__mb">
                   <div className="link__mb">
-                    <img src={logoCol} width="128"  alt="" />
-                    <img className="img__appStore" src={appStore} alt="" />
+                    <div className='logo3'></div>
+                    <a className='block-store' href="#store">t</a>
                   </div>
                 </div>
 
