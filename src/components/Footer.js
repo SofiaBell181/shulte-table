@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="footer-logo__mb">
                   <div className="link__mb">
                     <div className='logo3'></div>
-                    <a className='block-store' href="#store">t</a>
+                    <a href='https://apps.apple.com/us/app/schulte-table/id951462483' className='block-store' target='_blank' rel="noreferrer">t</a>
                   </div>
                 </div>
 

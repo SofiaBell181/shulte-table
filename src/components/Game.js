@@ -233,7 +233,7 @@ export default function Game() {
                 <div className='block-game' data-aos="zoom-in">
                     <div ref={table} className="table-game" onClick={onHandlerCell}></div>
                     <p className={(endGame === true) || (active === true) ? 'par-GameEnd show' : 'displayNone'}>Try our app for more customizations and track your results</p>
-                    <div className={active === true || (endGame === true) ? 'link-store store2 show' : 'displayNone'}></div>
+                    <a className={active === true || (endGame === true) ? 'link-store store2 show' : 'displayNone'} href='https://apps.apple.com/us/app/schulte-table/id951462483' target='_blank' rel="noreferrer">t</a>
 
                     <button onClick={startTimer} disabled={notActive} className='btnStart'>{intervalId}</button>
                     <img className='game-bg' ref={image} src={squares} alt="background" />

@@ -97,7 +97,7 @@ export default function About() {
                         <img src={logoColor}  className="phone-color logo" ref={logoRef} width="256" alt="logo shulte" />
                     </div>
                     <p>Try the Schulte method to increase attention and speed of perception of information</p>
-                    <div className='link-store'></div>
+                    <a href='https://apps.apple.com/us/app/schulte-table/id951462483' target='_blank' rel="noreferrer" className='link-store'>t</a>
                 </div>
 
        
